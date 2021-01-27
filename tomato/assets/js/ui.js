@@ -1,6 +1,7 @@
 $(function(){
 	
 	selectBtn('.btn_select');
+	// txtCopy ();
 
 	$('.btn_open_menu').on('click',function () {
 		if(!$(this).hasClass('open')) {
@@ -20,14 +21,14 @@ function parallaxFn () {
 	var _sct = $(window).scrollTop();
 	var $section = $('.main_sec_prods'); 
 	var _target = $section.find('.img');
-	var _ot = $section.offset().top + 150;
+	var _ot = $section.offset().top + 200;
 	var _secH = $section.innerHeight();
-	var _bottom = _secH / 1.7;
+	var _bottom = _secH - 50;
 
 	var _start = _sct + _wh;
 	var _stop = _ot + _secH + _wh;
 
-	_bttm1 = -_bottom + ((_start - _ot) * .2) > -100 ? -100 : -_bottom + ((_start - _ot) * .2);
+	_bttm1 = -_bottom + ((_start - _ot) * .6) > -100 ? -100 : -_bottom + ((_start - _ot) * .6);
 
 
 	if (_start >= _ot && _start <= _stop) {
@@ -36,7 +37,7 @@ function parallaxFn () {
 		})
 	}else if (_start > _stop ) {
 		_target.css({
-			bottom: -_bottom + ((_wh + _secH) * .2)
+			bottom: -_bottom + ((_wh + _secH) * .6)
 		})
 	}else {
 		_target.css({
@@ -61,3 +62,13 @@ function selectBtn (el) {
 		$selBtn.removeClass('on').find('span').text(_txt);
 	});
 };
+
+function txtCopy() {
+	var $copyTxt = document.querySelector(".txtCopy");
+	$copyTxt.select();
+	$copyTxt.setSelectionRange(0, 99999)
+	document.execCommand("copy");
+	//alert("Copied the text: " + $copyTxt.value);
+//   }
+
+}
