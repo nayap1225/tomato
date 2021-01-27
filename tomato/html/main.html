@@ -4,7 +4,8 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="maximum-scale=1, width=device-width, initial-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="../assets/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../assets/css/slick.css"> -->
 	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <title>TOMATO CREW</title>
 </head>
@@ -51,32 +52,34 @@
 		<div class="main_kv_wrap">
 			<div class="kv_inner">
 				<div class="kv_items">
-					<div class="item">
-						<div class="kv_bg" style=""></div>
-						<div class="kv_text">
-							<p class="txt">안데스 산맥에서만 크던 작은 토마토는 세계에서 사랑받는
-								채소가 되었습니다. 우리 가까이서 건강을 챙겨주는 토마토. 
-								바로 우리가 추구하는 가치입니다.</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="kv_bg" style=""></div>
-						<div class="kv_text">
-							<p class="txt">걱정없는 삶을 위한 우리의 탐색. 토마토 크루는 디지털
-								헬스케어를 위해 NIR 분광학 기반 비침습성 연속 혈당 
-								모니터링(NiCGM)에 도전하고 있습니다.</p>
-						</div>
-					</div>
-					<div class="item">
-						<div class="kv_bg" style=""></div>
-						<div class="kv_text">
-							<p class="txt">20년 넘게 감마선 응용 기술을 개발하며 빛의 가능성에 대해
-								파고 들었습니다. 빛으로 얻을 수 있는 신체 정보의 한계를
-								돌파하기. 토마토 크루는 오늘도 정진합니다.</p>
-						</div>
-					</div>
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide item item01">
+							<div class="kv_bg" style=""></div>
+							<div class="kv_text">
+								<p class="txt">안데스 산맥에서만 크던 작은 토마토는 세계에서 사랑받는
+									채소가 되었습니다. 우리 가까이서 건강을 챙겨주는 토마토. 
+									바로 우리가 추구하는 가치입니다.</p>
+							</div>
+						</li>
+						<li class="swiper-slide item item02">
+							<div class="kv_bg" style=""></div>
+							<div class="kv_text">
+								<p class="txt">걱정없는 삶을 위한 우리의 탐색. 토마토 크루는 디지털
+									헬스케어를 위해 NIR 분광학 기반 비침습성 연속 혈당 
+									모니터링(NiCGM)에 도전하고 있습니다.</p>
+							</div>
+						</li>
+						<li class="swiper-slide item item03">
+							<div class="kv_bg" style=""></div>
+							<div class="kv_text">
+								<p class="txt">20년 넘게 감마선 응용 기술을 개발하며 빛의 가능성에 대해
+									파고 들었습니다. 빛으로 얻을 수 있는 신체 정보의 한계를
+									돌파하기. 토마토 크루는 오늘도 정진합니다.</p>
+							</div>
+						</li>
+					</ul>
 				</div>
-				
+				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 		<!-- // key visual -->
@@ -251,22 +254,26 @@
 
 
 <script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/slick.min.js"></script>
+<!-- <script src="../assets/js/slick.min.js"></script> -->
+<script src="../assets/js/swiper.min.js"></script>
 <script src="../assets/js/ui.js"></script>
 <script>
 $(document).ready(function() {	
-	$('.main_kv_wrap .kv_items').slick({
-		infinite: true,
-		fade: true,
-		autoplay: true,
-		autoplaySpeed: 4000,
-		arrows:false,
-		dots: true,
-		speed: 3000,
-	});
-	
-	
 
+	var mainSwiper = new Swiper('.kv_items', {
+		effect: "fade",
+		speed: 1000,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.kv_inner .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		}
+	});
 });
 
 $(window).on('load',function () {
@@ -276,6 +283,8 @@ $(window).on('load',function () {
 $(window).on('scroll',function () {
 	parallaxFn ()
 })
+
+
 
 
 </script>
