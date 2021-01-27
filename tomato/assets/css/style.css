@@ -184,20 +184,25 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
 #footer_wrap .menu li + li {margin-left: 10rem;}
 #footer_wrap .menu strong {display: block; margin-bottom: 3rem; font-size: 3.4rem; font-weight: 600;}
 #footer_wrap .menu strong small {display: block; margin-bottom: 1.5rem; font-size: 1.5rem; font-weight: 800;}
-#footer_wrap .menu p, #footer_wrap .menu a {display: block; font-size: 1.4rem;}
+#footer_wrap .menu p {display: inline-block; position: relative; font-size: 1.4rem;}
+#footer_wrap .menu a, #footer_wrap .menu button {display: block; font-size: 1.4rem;}
 #footer_wrap .menu button {font-weight: 400;}
 #footer_wrap .menu a {font-weight: 600;}
 #footer_wrap .menu a:hover,
 #footer_wrap .menu button:hover {opacity:.5;}
 #footer_wrap .menu .txtCopy {position: absolute; width: 1px; height: 1px; border: 0; background: #f1f1f1;}
+#footer_wrap .toast_wrap {display: none;}
+#footer_wrap .toast_wrap .toast_inner {position: absolute; top: 100%; left: 50%; transform: translateX(-50%); transform: translateX(calc(-50% + .5px)); margin: .5rem 0 0; padding: 1rem 3rem; color: #fff; font-weight: 600; white-space: nowrap; font-size: 1.3rem; border-radius: .5rem; background: rgba(0,0,0,.7); opacity: 0; transition: opacity .3s ease;}
+#footer_wrap .toast_wrap .toast_inner.active {opacity: 1;}
 #footer_wrap .corp_info {font-size: 1.5rem; line-height: 2; font-weight: 600;}
 #footer_wrap .corp_info .copyright {margin-top: 1.5rem; font-size: 1.4rem; font-weight: 400;}
 .main #footer_wrap {background: #000;}
 .main #footer_wrap .f_cont {color: #fff;}
-.main #footer_wrap .menu p, .main #footer_wrap .menu a {color: #f6f6f4; opacity: .63;}
+.main #footer_wrap .menu p, .main #footer_wrap .menu a, .main #footer_wrap .menu button {color: #777;}
 .main #footer_wrap .menu a:hover,
-.main #footer_wrap .menu button:hover {opacity: 1;}
+.main #footer_wrap .menu button:hover {color: #fff;}
 .main #footer_wrap .menu .txtCopy {background: #000;}
+.main #footer_wrap .toast_wrap .toast_inner {color: #222; background: rgba(255,255,255,1);}
 .main #footer_wrap .corp_info {color: #fff; opacity: .63;}
 
 #footer_wrap .f_logo {position: absolute; left: 0; top: 0; width: 23.8rem;}

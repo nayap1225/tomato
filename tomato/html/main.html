@@ -219,7 +219,10 @@
                             <small>토마토 크루가 궁금하세요?</small>
                             문의하기
                         </strong>
-                        <p><a href="mailto:contact@tomatocrew.io" class="email">contact@tomatocrew.io</a></p>
+                        <p>
+                            <button type="button" onclick="txtCopy()">contact@tomatocrew.io</button>
+                            <input type="text" class="txtCopy" value="contact@tomatocrew.io">
+                        </p>
                     </li>
                     <li>
                         <strong>
@@ -252,7 +255,6 @@
 <script src="../assets/js/ui.js"></script>
 <script>
 $(document).ready(function() {	
-	parallaxFn ()
 	$('.main_kv_wrap .kv_items').slick({
 		infinite: true,
 		fade: true,
@@ -266,6 +268,10 @@ $(document).ready(function() {
 	
 
 });
+
+$(window).on('load',function () {
+	parallaxFn ()
+})
 
 $(window).on('scroll',function () {
 	parallaxFn ()
