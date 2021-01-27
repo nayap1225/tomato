@@ -1,5 +1,7 @@
 $(function(){
 	
+	selectBtn('.btn_select');
+
 	$('.btn_open_menu').on('click',function () {
 		if(!$(this).hasClass('open')) {
 			$(this).addClass('open').siblings('.gnb').addClass('show');
@@ -8,8 +10,7 @@ $(function(){
 			$(this).removeClass('open').siblings('.gnb').removeClass('show');
 			$('.hlogo').removeClass('on');
 		}
-		
-	})
+	});
 
 });
 
@@ -41,5 +42,22 @@ function parallaxFn () {
 		_target.css({
 			bottom: - _bottom
 		})
-	}	
-}
+	};
+};
+
+function selectBtn (el) {
+	var $btn = el,
+		$list = $('.select_list'),
+		$listBtn = $($list).find('li');
+	$($btn).on('click',function () {
+		var $this = $(this);
+		$this.hasClass('on') ? $this.removeClass('on').siblings($list).fadeOut(100) : $this.addClass('on').siblings($list).fadeIn(100);
+	});
+	$($listBtn).on('click','button',function () {
+		var $this = $(this),
+			_txt = $(this).text(),
+			$selBtn = $this.closest($list).siblings($btn);
+		$this.parent().addClass('on').siblings().removeClass('on').closest($list).fadeOut(100);
+		$selBtn.removeClass('on').find('span').text(_txt);
+	});
+};
