@@ -147,7 +147,7 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
 .fn{float: none !important;}
 
 #wrap {position: relative; width: 100%; margin: 0 auto; background: #fff;}
-.inner {position: relative; width: 100%; max-width: 1280px; margin: 0 auto;}
+.inner {position: relative; width: 100%; max-width: 128rem; margin: 0 auto;}
 
 #header_wrap {position: absolute; left: 0; right: 0; top: 0; height: 17.1rem; background: transparent; z-index: 2;}
 #header_wrap .inner {height: 100%;}
@@ -200,7 +200,7 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
 .main #footer_wrap .f_cont {color: #fff;}
 .main #footer_wrap .menu p, .main #footer_wrap .menu a, .main #footer_wrap .menu button {color: #777;}
 .main #footer_wrap .menu a:hover,
-.main #footer_wrap .menu button:hover {color: #fff;}
+.main #footer_wrap .menu button:hover {color: #fff; opacity: 1;}
 .main #footer_wrap .menu .txtCopy {background: #000;}
 .main #footer_wrap .toast_wrap .toast_inner {color: #222; background: rgba(255,255,255,1);}
 .main #footer_wrap .corp_info {color: #fff; opacity: .63;}
