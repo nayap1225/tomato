@@ -559,7 +559,7 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
 	.section_company .cont_box.ci .img_box {width: 100%; margin: 0;}
 	.section_company .cont_box.ci .img_box img {width: 100%;}
 
-	.section_company .cont_box.left .cont {padding-right: 0;}
+	.section_company .cont_box.left .cont {width: 100%; padding-right: 0;}
 	.section_company .cont_box.left .title {margin-bottom: 3.5rem;}
 	.section_company .cont_box.left .img_box {padding-top: 3.9rem; text-align: left;}
 	.section_company .cont_box .noti_box p {font-size: 1.2rem; color: #222; font-weight: 400; line-height: 1.83; letter-spacing: -.024rem;}

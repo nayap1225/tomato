@@ -244,14 +244,14 @@
 $(document).ready(function() {	
 
 	// 스와이퍼옵션
-	var swiperOpt = {speed : 1000, delay : 5000 , bgAni : '5s', txtAni : '1s', txtAni : '.7s'} 
+	var swiperOpt = {speed : 1000, delay : 5000 , bgAni : '5s', txtAni : '1s', txtDelay : '.7s'}
 	
 	// 스와이퍼 옵션 
 	// speed : 스와이퍼 이동 속도, (1000 = 1초)
 	// delay : 스와이퍼 딜레이 속도 (1000 = 1초)
 	// bgAni : 이미지 애니메이션 속도 (1s = 1초)
 	// txtAni : 텍스트 애니메이션 속도 (1s = 1초)
-	// txtAni : 텍스트 애니메이션 딜레이 속도 (1s = 1초)
+	// txtDelay : 텍스트 애니메이션 딜레이 속도 (1s = 1초)
 
 	$('.item.swiper-slide .kv_bg').css('animation-duration', swiperOpt.bgAni);
 	$('.item.swiper-slide .kv_text').css({'animation-duration': swiperOpt.txtAni, 'animation-delay' : swiperOpt.txtDelay});
