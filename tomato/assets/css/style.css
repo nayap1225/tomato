@@ -586,8 +586,8 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
 	.main_kv_wrap .kv_text .txt {width: 27.4rem; max-width: 100%;}
 	.main_kv_wrap .kv_items .kv_bg {background-position: center center;}
 	.main_kv_wrap .kv_items .item01 .kv_bg {background-image: url(../images/main_kv_01_m.jpg);}
-	.main_kv_wrap .kv_items .item02 .kv_bg {background-image: url(../images/main_kv_03_m.jpg);}
-	.main_kv_wrap .kv_items .item03 .kv_bg {background-image: url(../images/main_kv_02_m.jpg);}
+	.main_kv_wrap .kv_items .item02 .kv_bg {background-image: url(../images/main_kv_02_m.jpg);}
+	.main_kv_wrap .kv_items .item03 .kv_bg {background-image: url(../images/main_kv_03_m.jpg);}
 	.main_kv_wrap .swiper-pagination {bottom: 3.8rem;}
 	.main_kv_wrap .swiper-pagination .swiper-pagination-bullet {width: .7rem; height: .7rem;}
 	.main_kv_wrap .swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {margin-left: .8rem;}
